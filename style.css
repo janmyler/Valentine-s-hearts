@@ -1,0 +1,116 @@
+body {
+    /* CSS3 Hearts pattern by Lea Verou: http://lea.verou.me/css3patterns/ */
+    background: 
+        radial-gradient(60% 43%, closest-side circle, #b03 26%, rgba(187,0,51,0) 27%),
+        radial-gradient(40% 43%, closest-side circle, #b03 26%, rgba(187,0,51,0) 27%),
+        radial-gradient(40% 22%, closest-side circle, #d35 45%, rgba(221,51,85,0) 46%),
+        radial-gradient(60% 22%, closest-side circle, #d35 45%, rgba(221,51,85,0) 46%),
+        radial-gradient(50% 35%, closest-side circle, #d35 30%, rgba(221,51,85,0) 31%),
+      
+        radial-gradient(60% 43%, closest-side circle, #b03 26%, rgba(187,0,51,0) 27%) 50px 50px,
+        radial-gradient(40% 43%, closest-side circle, #b03 26%, rgba(187,0,51,0) 27%) 50px 50px,
+        radial-gradient(40% 22%, closest-side circle, #d35 45%, rgba(221,51,85,0) 46%) 50px 50px,
+        radial-gradient(60% 22%, closest-side circle, #d35 45%, rgba(221,51,85,0) 46%) 50px 50px,
+        radial-gradient(50% 35%, closest-side circle, #d35 30%, rgba(221,51,85,0) 31%) 50px 50px;
+    background: 
+        -webkit-radial-gradient(60% 43%, closest-side circle, #b03 26%, rgba(187,0,51,0) 27%),
+        -webkit-radial-gradient(40% 43%, closest-side circle, #b03 26%, rgba(187,0,51,0) 27%),
+        -webkit-radial-gradient(40% 22%, closest-side circle, #d35 45%, rgba(221,51,85,0) 46%),
+        -webkit-radial-gradient(60% 22%, closest-side circle, #d35 45%, rgba(221,51,85,0) 46%),
+        -webkit-radial-gradient(50% 35%, closest-side circle, #d35 30%, rgba(221,51,85,0) 31%),
+      
+        -webkit-radial-gradient(60% 43%, closest-side circle, #b03 26%, rgba(187,0,51,0) 27%) 50px 50px,
+        -webkit-radial-gradient(40% 43%, closest-side circle, #b03 26%, rgba(187,0,51,0) 27%) 50px 50px,
+        -webkit-radial-gradient(40% 22%, closest-side circle, #d35 45%, rgba(221,51,85,0) 46%) 50px 50px,
+        -webkit-radial-gradient(60% 22%, closest-side circle, #d35 45%, rgba(221,51,85,0) 46%) 50px 50px,
+        -webkit-radial-gradient(50% 35%, closest-side circle, #d35 30%, rgba(221,51,85,0) 31%) 50px 50px;
+    background: 
+        -moz-radial-gradient(60% 43%, closest-side circle, #b03 26%, rgba(187,0,51,0) 27%),
+        -moz-radial-gradient(40% 43%, closest-side circle, #b03 26%, rgba(187,0,51,0) 27%),
+        -moz-radial-gradient(40% 22%, closest-side circle, #d35 45%, rgba(221,51,85,0) 46%),
+        -moz-radial-gradient(60% 22%, closest-side circle, #d35 45%, rgba(221,51,85,0) 46%),
+        -moz-radial-gradient(50% 35%, closest-side circle, #d35 30%, rgba(221,51,85,0) 31%),
+      
+        -moz-radial-gradient(60% 43%, closest-side circle, #b03 26%, rgba(187,0,51,0) 27%) 50px 50px,
+        -moz-radial-gradient(40% 43%, closest-side circle, #b03 26%, rgba(187,0,51,0) 27%) 50px 50px,
+        -moz-radial-gradient(40% 22%, closest-side circle, #d35 45%, rgba(221,51,85,0) 46%) 50px 50px,
+        -moz-radial-gradient(60% 22%, closest-side circle, #d35 45%, rgba(221,51,85,0) 46%) 50px 50px,
+        -moz-radial-gradient(50% 35%, closest-side circle, #d35 30%, rgba(221,51,85,0) 31%) 50px 50px;        
+    background-color:#b03;
+    background-size:100px 100px;
+    font-family: sans-serif;
+}
+
+a { text-decoration: none; border-bottom: 1px solid; color: #d00 }
+a:hover { border-bottom: 2px solid; color: #900 }
+a[rel=license] { border: none }
+
+details, aside {
+    position: absolute;
+    left: 1em;
+    margin: 1em 0;
+    padding: 10px;
+    background: #fff;
+    border:  1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    max-width: 220px;
+    font-size: 0.9em;
+    z-index: 100;
+    background-color:rgba(255, 255, 255, 0.7);      
+}
+
+details { top: 3.25em }
+details > div { margin: 10px 0 }
+details > summary { cursor: pointer }
+
+aside { margin: 0; padding: 0; top: 1em }
+aside > p { margin: 5px 10px 5px 5px }
+
+audio { display: none }
+
+#wrapper { width: 960px; margin: 0 auto }
+
+h1, h2 {
+    margin: 0;
+    text-align: center;
+    color: #b03;    
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa,
+                 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3),
+                 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2),
+                 0 20px 20px rgba(0,0,0,.15);
+}
+
+h1 { font-size: 6.5em; font-family: 'Norican', cursive }
+h2 { font-size: 5em; text-transform: uppercase; font-family: 'Sansita One', cursive; margin-top: 360px }
+hgroup { position: relative; margin-top: 15px }
+
+canvas {
+    position: absolute;
+    top: 10px;
+    margin: 10px 70px;
+    border: 10px solid rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-box-reflect: below 5px -webkit-linear-gradient(top, transparent, transparent 50%, rgba(255,255,255,0.3));
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 970px;    
+    margin-left: -485px;
+    padding: 0 10px;
+    background: #fff;
+    border:  1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    font-size: 0.8em;
+    background-color:rgba(255, 255, 255, 0.7);
+    z-index: 50;
+}
+
+footer p { margin: 6px 0 0 0; line-height: 30px }
+
+abbr[title] { border-bottom: 1px dotted; cursor: help }
+::-moz-selection { background: #fff; color: #d00; text-shadow: none }
+::selection { background: #fff; color: #d00; text-shadow: none }
