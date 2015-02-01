@@ -1,4 +1,4 @@
-# [Valentine's Hearts](http://valentine.janmyler.com)
+# [Valentine's Hearts](http://demo.janmyler.ninja/valentine/)
 
 My little Valentine's day project, experimenting with new HTML5 features.
 
