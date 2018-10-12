@@ -59,9 +59,6 @@ details, aside {
     background-color:rgba(255, 255, 255, 0.7);
 }
 
-aside { margin: 0; padding: 0; top: 1em }
-aside > p { margin: 5px 10px 5px 5px }
-
 audio { display: none }
 
 #wrapper { width: 960px; margin: 0 auto }
@@ -88,6 +85,22 @@ canvas {
     border-radius: 10px;
     -moz-border-radius: 10px;
     -webkit-box-reflect: below 5px -webkit-linear-gradient(top, transparent, transparent 50%, rgba(255,255,255,0.3));
+}
+
+button {
+    position: absolute;
+    z-index: 10;
+    top: 20px;
+    left: 20px;
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    opacity: .6;
+    outline: none;
+}
+
+button:hover {
+  opacity: .9;
 }
 
 footer {

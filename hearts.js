@@ -34,8 +34,8 @@ var hearts = [], sound_hearts = [];
     source.src = 'Loveshadow_-_Heart_On_Redial.ogg';
   }
   audio.appendChild(source);
-  audio.controls = true;
   audio.autoplay = true;
+  audio.controls = true;
   audio.loop = true;
   document.body.appendChild(audio);
 
@@ -54,8 +54,7 @@ var hearts = [], sound_hearts = [];
 window.addEventListener('load', function(e) {
   if (aContext) {
     var source = aContext.createMediaElementSource(audio);
-    source.connect(gainNode);
-    gainNode.connect(analyser);
+    source.connect(analyser);
     analyser.connect(aContext.destination);
   }
 
@@ -69,18 +68,14 @@ window.addEventListener('load', function(e) {
   drawAudio();    // draw audio visualisation
 }, false);
 
-// Mute sounds
-window.addEventListener('keydown', function(e) {
-  if (e.keyCode == 77 || e.keyCode == 32) {  // key 'm' or space
-    if (aContext) {
-      gainNode.gain.value = (gainNode.gain.value) ? 0 : 1;
-    } else {
-      audio.volume = (audio.volume) ? 0 : 1;
-    }
-    var checkbox = document.querySelector('#toggle-mute');
-    checkbox.checked = (checkbox.checked) ? 0 : 1;
+// Play/pause controls
+document.getElementById('play-toggle').addEventListener('click', function() {
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
   }
-}, false);
+});
 
 document.querySelector('#toggle-mute').addEventListener('click', function(e) {
   if (aContext) {
