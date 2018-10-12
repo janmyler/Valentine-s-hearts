@@ -1,15 +1,3 @@
-// requestAnim shim layer by Paul Irish: http://paulirish.com/2011/requestanimationframe-for-smart-animating/
-window.requestAnimFrame = (function(){
-  return  window.requestAnimationFrame       ||
-    window.webkitRequestAnimationFrame ||
-    window.mozRequestAnimationFrame    ||
-    window.oRequestAnimationFrame      ||
-    window.msRequestAnimationFrame     ||
-    function(/* function */ callback, /* DOMElement */ element){
-      window.setTimeout(callback, 1000 / 60);
-    };
-  })();
-
 
 var canvas, audio, analyser, gainNode, gContext, aContext,
   CANVAS_WIDTH, CANVAS_HEIGHT;
@@ -77,21 +65,11 @@ document.getElementById('play-toggle').addEventListener('click', function() {
   }
 });
 
-document.querySelector('#toggle-mute').addEventListener('click', function(e) {
-  if (aContext) {
-    gainNode.gain.value = (gainNode.gain.value) ? 0 : 1;
-  } else {
-    audio.volume = (audio.volume) ? 0 : 1;
-  }
-}, false);
-
 // Canvas drawing methods
 function drawAudio() {
-  window.requestAnimFrame(drawAudio);
+  window.requestAnimationFrame(drawAudio);
 
   gContext.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-  gContext.fillStyle = 'rgba(255, 255, 255, 0.8)';
-  gContext.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
   if (aContext) {
     var freqByteData = new Uint8Array(analyser.frequencyBinCount);
@@ -100,9 +78,6 @@ function drawAudio() {
     var offset = 30,
       ratio = Math.floor(freqByteData.length / sound_hearts.length),
       amp = 1 / 255;
-
-    gContext.fillStyle = 'hsla(0, 70%, 80%, 0.4)';
-    gContext.lineCap = 'round';
 
     // draw the sound hearts
     for (var i = sound_hearts.length - 1; i; --i) {
@@ -162,7 +137,6 @@ Heart.prototype.draw = function() {
   gContext.bezierCurveTo(step, -step, step * 2.25, -step * 2, step * 2, -step * 3);
   gContext.arc(step, -step * 3, step, 0, Math.PI, true);
 
-  //gContext.stroke();
   gContext.fill();
 
   gContext.restore();
@@ -184,6 +158,7 @@ Sound_heart.prototype.draw = function(alpha) {
 
   gContext.lineWidth = 15;
   gContext.strokeStyle = 'hsla(0, 60%, 40%, ' + alpha + ')';
+  gContext.lineCap = 'round';
 
   gContext.beginPath();
   gContext.moveTo(0, 0);
