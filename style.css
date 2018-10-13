@@ -81,8 +81,9 @@ canvas {
     position: absolute;
     top: 10px;
     margin: 10px 70px;
-    border: 10px solid rgba(0, 0, 0, 0.4);
+    border: 3px solid rgb(211, 55, 68);
     border-radius: 10px;
+    background: rgba(255, 255, 255, 0.7);
     -moz-border-radius: 10px;
     -webkit-box-reflect: below 5px -webkit-linear-gradient(top, transparent, transparent 50%, rgba(255,255,255,0.3));
 }
@@ -95,12 +96,12 @@ button {
     padding: 4px 10px;
     border-radius: 10px;
     font-size: 1.1em;
-    opacity: .6;
+    opacity: .5;
     outline: none;
 }
 
 button:hover {
-  opacity: .9;
+    opacity: .9;
 }
 
 footer {
