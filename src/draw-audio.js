@@ -21,6 +21,23 @@ function setupAudioNode(songName) {
   return audio
 }
 
+function setupSoundHearts(canvasWidth, canvasHeight, count = 32) {
+  let baseSize = 10
+  const hearts = []
+
+  for (let i = 0; i < count; i++) {
+    hearts.push(SoundHeart({
+      originX: canvasWidth / 2,
+      originY: canvasHeight / 2 + baseSize / 2,
+      size: baseSize,
+    }))
+
+    baseSize += 20
+  }
+
+  return hearts
+}
+
 function render(renderData, soundHearts, hearts) {
   window.requestAnimationFrame(() =>
     render(renderData, soundHearts, hearts))
@@ -80,19 +97,8 @@ function render(renderData, soundHearts, hearts) {
     }
   })
 
-  const soundHearts = []
+  const soundHearts = setupSoundHearts(canvas.width, canvas.height)
   const hearts = []
-  let baseSize = 10
-
-  for (let i = 0; i < 32; i++) {
-    soundHearts.push(SoundHeart({
-      originX: canvas.width / 2,
-      originY: canvas.height / 2 + baseSize / 2,
-      size: baseSize,
-    }))
-
-    baseSize += 20
-  }
 
   render(
     {
