@@ -56,13 +56,13 @@ Music:
     <link rel="stylesheet" media="screen" href="style.css">
     <link rel="image_src" href="img/site_icon.jpg">
     <link rel="icon" href="img/icon.png">
-    <script src="hearts.js" defer></script>
+    <script type="module" src="src/draw-audio.js" defer></script>
 </head>
 
 <body>
     <button id="play-toggle">Play / pause</button>
     <div id="wrapper">
-        <canvas id="myCanvas" width="800" height="600">
+        <canvas id="canvas" width="800" height="600">
             Whoops, no hearts for you today!
         </canvas>
         <hgroup>
